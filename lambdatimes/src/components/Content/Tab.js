@@ -11,7 +11,6 @@ const Tab = props => {
   else {
     active = 'tab';
   }
-
   return (
     <div className={active} onClick={() => props.changeSelected(props.eachTab)}>
       {props.eachTab.toUpperCase()}
