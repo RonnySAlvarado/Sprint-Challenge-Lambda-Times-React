@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
-  
+
   let active = 'tab';
 
   if (props.selected === props.eachTab) {
@@ -18,6 +19,10 @@ const Tab = props => {
   );
 };
 
-// Make sure you include PropTypes on your props.
+Tab.propTypes = {
+  tabs: PropTypes.array,
+  changeSelected: PropTypes.func,
+  selected: PropTypes.string
+};
 
 export default Tab;
